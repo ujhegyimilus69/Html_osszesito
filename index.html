@@ -39,10 +39,7 @@
         <li>kisérő tanár: Playboi Carti <a href="carti@suli.com">Elérhetőség!</a></li>
     </ul>
 <h3><a href="#jelentkezes">Kattints ide a jelentkezéshez!</a></h3>
-<h3>
-<form id="jelentkezes">
 
-</form></h3>
 <h3><a href="https://hu.wikipedia.org/wiki/Szeged"><i>Szegedi wikipédia</i></a> 
 </h3>
 
@@ -77,7 +74,7 @@
   </tfoot>
 </table>
 
-<form action="https://httpbin.org/post" method="POST">
+<form action="https://httpbin.org/post" id="jelentkezes" method="POST">
 
   <fieldset>
     <legend>Személyes adatok</legend>
@@ -102,9 +99,60 @@
       <input type="number" id="letszam" name="letszam" value="1" min="1" max="4" required>
     </p>
   </fieldset>
-<p><strong>Melyik buszra ülsz</strong></p>
-  <input type="radio" id="mer" name="mer" value="1">
 
+  <fieldset>
+    <legend>Melyik buszra ülsz?</legend>
+
+    <label>
+      <input type="radio" name="busz" value="piros" checked>
+      A piros buszra
+    </label>
+
+    <label>
+      <input type="radio" name="busz" value="feher">
+      A fehér buszra
+    </label>
+  </fieldset>
+
+
+</form>
+
+<form>
+  <fieldset>
+    <legend>Egyéb</legend>
+
+    <p>
+      <label for="etkezes">Étkezés *</label>
+      <select id="etkezes" name="etkezes" required>
+        <option value="">-- válassz --</option>
+        <option value="husos">húsos menü</option>
+        <option value="vega">vegetáriánus menü</option>
+        <option value="sajat">hozok magamnak ételt</option>
+      </select>
+    </p>
+
+    <fieldset>
+      <legend>Extra program</legend>
+      <label>
+        <input type="checkbox" name="extra" value="varlatogatas">
+        Várlátogatás
+      </label>
+      <label>
+        <input type="checkbox" name="extra" value="sethajozas">
+        Sétahajózás a Tiszán
+      </label>
+    </fieldset>
+
+    <p>
+      <label for="megjegyzes">Megjegyzés</label>
+      <textarea id="megjegyzes" name="megjegyzes" rows="4" style="resize: none"></textarea>
+    </p>
+  </fieldset>
+
+    <input type="checkbox" id="szulo" name="szulo" value="igen" required>
+  <label for="szulo">A szülő tud a kirándulásról *</label>
+
+  <button type="submit">Jelentkezem</button>
 </form>
 
 
